@@ -1,0 +1,139 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 76px;
+  margin: 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+  background-image: url('lbg.jpg');
+  background-size: cover;
+  color: rgb(214, 213, 217);
+  text-align: center;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 40px;
+  width: calc(100% - 160px);
+  left: 80px;
+}
+
+.nav-bar a {
+  float: right;
+  margin: 0 14px;
+  color: rgb(214, 213, 217);
+  text-decoration: none;
+  
+}
+
+.cta {
+  resize: both;
+  overflow: auto;
+}
+
+.begin {
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 85px);
+  border-bottom: 2px solid rgb(214, 213, 217);
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+
+
+.add-phase {
+  background: #222;
+  color: rgb(214, 213, 217);
+  text-align: center;
+}
+
+.add-phase h1, h3 {
+  font-weight: 300;
+  text-transform: none;
+  font-family: 'Lato', sans-serif;
+}
+
+  .add-phase h1 {
+    font-size: 56px;
+    color: rgb(54, 227, 181);
+  }
+  
+  .add-phase h3 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  .new-item {
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    color: rgb(214, 213, 217);
+    border: 2px solid rgb(214, 213, 217);
+    min-width: 300px;
+  }
+  
+  .items-list .item {
+    padding: 10px;
+    background: rgb(214, 213, 217);
+    color: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .36);
+    width: 304px;
+    position: relative;
+    text-align: left;
+  }
+  
+  .delete-item {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    padding-top: 7px;
+    height: calc(100% - 7px);
+    color: rgba(0, 0, 0, .24);
+    text-align: center;
+  }
+  
+  .delete-item:hover {
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
