@@ -18,6 +18,19 @@ $('body').on('submit', '.add-item', function(e) {
   return false;
 });
 
+$('body').on('submit', '.add-retail', function(e) {
+  e.preventDefault();
+  
+  const item = $(this).find("input").val();
+  const itemObj = $("<div>").addClass("item").text(item);
+  $(itemObj).append($('<div>').addClass('delete-item').text('x'));
+  $(".retail-list").append(itemObj);
+  
+  $(this).find("input").val('');
+  
+  return false;
+});
+
 
 $('body').on('click', '.delete-item', function() {
   $(this).closest(".item").remove();
