@@ -5,6 +5,7 @@ Parse.initialize("ss4Qntwp1qBNb2cDgmI10Jt6A9RNpFJOckwGbHAn", "dQVT5XqLPGwKy2ycHZ
 *  Add shit to a list
 **/
 
+/*
 $('body').on('submit', '.add-item', function(e) {
   e.preventDefault();
   
@@ -30,7 +31,7 @@ $('body').on('submit', '.add-retail', function(e) {
   
   return false;
 });
-
+*/
 
 $('body').on('click', '.delete-item', function() {
   $(this).closest(".item").remove();
@@ -72,6 +73,20 @@ $('body').on('submit', '.reg-form', function(e) {
   });
   
   return false;
+});
+
+
+
+$('body').on('click', '.comparebutton', function() {
+  
+  $('.c1').fadeOut();
+  $('.c2').fadeOut();
+  
+  if($('.n1').val() && $('.n2').val()) {
+    $('.c1').fadeIn();
+  } else if($('.n1').val()) {
+    $('.c2').fadeIn();
+  }
 });
 
 
