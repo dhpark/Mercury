@@ -95,7 +95,7 @@ new_form = str(results_list).replace("[", "{")
 wolfram_input = str(new_form).replace("]", "}")
 # print(str(wolfram_input))
 encoded = base64.b64encode(bytes(wolfram_input, "UTF-8"))
-
+print(encoded)
 wolfram = "https://www.wolframcloud.com/objects/665af020-cc1a-411f-a538-ccd2173ad1b5?input="
 wolfram_api = wolfram + encoded.decode('utf-8')
 # print(wolfram_api)
