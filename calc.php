@@ -33,6 +33,7 @@
       <div class="items-list"></div>
     </center>
     
+    <script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>

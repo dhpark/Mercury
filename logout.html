@@ -7,26 +7,12 @@
   </head>
   
   <body class="landing">
-  
-    <div class="nav-bar">
-      <a href="login.html">Login</a>
-      <a href="#">Home</a>
-    </div>
-  
-    <div class="cta">
-      <h1>Shopping at its best.</h1>
-      <div class="sub-description">
-        Data-driven recommendations for<br>
-        when and where to shop
-      </div>
-    </div>
-  
-    <a class="begin" href="calc.php">
-      START EXPLORING
-    </a>
-    
     <script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+      Parse.initialize("ss4Qntwp1qBNb2cDgmI10Jt6A9RNpFJOckwGbHAn", "dQVT5XqLPGwKy2ycHZSKhvDHJWCX5lvQYb75qCQo");
+      Parse.User.logOut();
+      window.location.replace('index.html');
+    </script>
   </body>
 </html>

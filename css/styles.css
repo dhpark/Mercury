@@ -130,9 +130,54 @@ a {
 
 
 
+.login-form {
+  
+}
+
+.login-form .error, .reg-form .error {
+  position: relative;
+  top: 14px;
+  
+}
+
+.login-form input, .reg-form input {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(214, 213, 217);
+  color: rgb(214, 213, 217);
+  font-weight: 400;
+  margin: 4px 0;
+  min-width: 220px;
+}
+
+.login-form button, .reg-form button {
+  padding: 10px;
+  background: rgb(214, 213, 217);
+  border: none;
+  color: #222;
+  font-weight: 400;
+  text-transform: uppercase;
+  min-width: 244px;
+  margin: 4px 0;
+}
 
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
