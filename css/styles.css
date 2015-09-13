@@ -72,6 +72,13 @@ a {
 }
 
 
+.add-item {
+  margin: 0 10px;
+}
+
+.c1, .c2 {
+  display: none;
+}
 
 .add-phase {
   background: #222;

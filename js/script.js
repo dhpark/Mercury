@@ -5,15 +5,21 @@ Parse.initialize("ss4Qntwp1qBNb2cDgmI10Jt6A9RNpFJOckwGbHAn", "dQVT5XqLPGwKy2ycHZ
 *  Add shit to a list
 **/
 
+
+function addForms() {
+  $('.all-forms').append('<div class="nf"><br><br><form class="add-item" style="display:inline-block">\
+                    <input type="text" placeholder="Enter an item (e.g. cupcakes)" class="new-item n1">\
+                  </form>\
+                  <form class="add-retail" style="display:inline-block">\
+                    <input type="text" placeholder="Enter a retailer brand (e.g. Walmart)" class="new-item n2">\
+                  </form></div>');
+}
+
+
 $('body').on('submit', '.add-item', function(e) {
   e.preventDefault();
   
-  const item = $(this).find("input").val();
-  const itemObj = $("<div>").addClass("item").text(item);
-  $(itemObj).append($('<div>').addClass('delete-item').text('x'));
-  $(".items-list").append(itemObj);
-  
-  $(this).find("input").val('');
+  addForms();
   
   return false;
 });
@@ -21,16 +27,10 @@ $('body').on('submit', '.add-item', function(e) {
 $('body').on('submit', '.add-retail', function(e) {
   e.preventDefault();
   
-  const item = $(this).find("input").val();
-  const itemObj = $("<div>").addClass("item").text(item);
-  $(itemObj).append($('<div>').addClass('delete-item').text('x'));
-  $(".retail-list").append(itemObj);
-  
-  $(this).find("input").val('');
+ addForms();
   
   return false;
 });
-
 
 $('body').on('click', '.delete-item', function() {
   $(this).closest(".item").remove();
@@ -72,6 +72,20 @@ $('body').on('submit', '.reg-form', function(e) {
   });
   
   return false;
+});
+
+
+
+$('body').on('click', '.comparebutton', function() {
+  var n = $('.nf').length;
+  
+    $('.c1').fadeOut();
+    $('.c2').fadeOut();
+  if(n == 1) {
+    $('.c2').fadeIn();
+  } else if(n >= 2) {
+    $('.c1').fadeIn();
+  }
 });
 
 
