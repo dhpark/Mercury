@@ -1,115 +1,338 @@
-<!doctype html>
-<html>
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
-    <script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
-    <script>
-      $(function() {
-        $("login").click(function() {
-          var username = $("#username").value();
-          var password = $("#password").value();
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mercury</title>
+		<meta name="description" content="A free HTML5/CSS3 template made exclusively for Codrops by Peter Finlan" />
+		<meta name="keywords" content="html5 template, css3, one page, animations, agency, portfolio, web design" />
+		<meta name="author" content="Peter Finlan" />
+		<!-- Bootstrap -->
+		<script src="js/modernizr.custom.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/jquery.fancybox.css" rel="stylesheet">
+		<link href="css/flickity.css" rel="stylesheet" >
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/queries.css" rel="stylesheet">
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- open/close -->
+		<header>
+			<section class="hero">
+				<div class="texture-overlay"></div>
+				<div class="container">
+					<div class="row nav-wrapper">
+						<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+							<a href="#"><img src="img/logo-white@2x.png" alt="Boxify Logo"></a>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+							<p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+						</div>
+					</div>
+					<div class="row hero-content">
+						<div class="col-md-12">
+							<h1 class="animated fadeInDown"><img src="img/compute2.png" alt="Price comparison and history for any e-commerce."</h1>
+							<a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Dive in now</a> <a href="#features" class="learn-btn animated fadeInUp">Learn more <i class="fa fa-arrow-down"></i></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<section class="features-list" id="features">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
 
-          alert("username:" + username + " - password:" + password);
+						<div class="col-md-4 feature-1 wp2">
+							<div class="feature-icon">
+								<i class="fa fa-shopping-cart"></i>
+							</div>
+							<div class="feature-content">
+								<h1>Omnichannel</h1>
+								<p>Maximizes conversion rates by facilitating online purchases and local shopping. Boosts mobile performance by enhancing the pickup experience.</p>
+								<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-4 feature-2 wp2 delay-05s">
+							<div class="feature-icon">
+								<i class="fa fa-line-chart "></i>
+							</div>
+							<div class="feature-content">
+								<h1>Commerce Metrics</h1>
+								<p>Focus on tracking, saving, and presenting tangible e-commerce data derived from past prices, competitors, and web activity for enterprise and personal use.</p>
+								<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-4 feature-3 wp2 delay-1s">
+							<div class="feature-icon">
+								<i class="fa fa-heart"></i>
+							</div>
+							<div class="feature-content">
+								<h1>User Focus</h1>
+								<p>Every step of the way we keep the users in mind, ensuring that we're involved with every descision. </p>
+								<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
+							</div>
+						</div>
 
-          user.signUp(null, {
-            success: function(user) {
-              // Hooray! Let them use the app now.
-              var user = new Parse.User();
-              user.set("username", username);
-              user.set("password", password);
-              user.set("email", "dhpark01@email.wm.edu");
-              user.save();
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="showcase">
+			<div class="showcase-wrap">
+				<div class="texture-overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="device wp3">
+								<div class="device-content">
+									<div class="showcase-slider">
+										<ul class="slides" id="showcaseSlider">
+											<li>
+												<img src="img/screen1.jpg" alt="Device Content Image">
+											</li>
+											<li>
+												<img src="img/screen2.jpg" alt="Device Content Image">
+											</li>
+											<li>
+												<img src="img/screen3.jpg" alt="Device Content Image">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h1>Showcase your Product or Service</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+							<blockquote class="team-quote">
+								<div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
+								<p>“What used to take two hours on the weekend, now customers are able to get that done in five to ten minutes,” said Ravi Jariwala, San Francisco-based direct of public relations at Walmart. “The time savings is a really key benefit; the savings you get with shopping at Walmart is another benefit."</p>
+								<div class="logo-quote">
+									<a href="http://www.mobilecommercedaily.com/walmarts-mobile-enabled-grocery-ordering-drives-repeat-visits-prompting-expansion">Mobile Commerce Daily</a>
+								</div>
+							</blockquote>
+							<a href="http://tympanus.net/codrops/?p=22554" class="download-btn">Download! <i class="fa fa-download"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            },
-            error: function(user, error) {
-              // Show the error message somewhere and let the user try again.
-              console.log("Error: " + error.code + " " + error.message);
-            }
-          });
-
-        })
-      });
-    </script>
-  </head>
-  
-  <body class="landing">
-    <script>
-      Parse.initialize("ss4Qntwp1qBNb2cDgmI10Jt6A9RNpFJOckwGbHAn", "dQVT5XqLPGwKy2ycHZSKhvDHJWCX5lvQYb75qCQo");
-
-      var currentUser = Parse.User.current();
-      if (currentUser) {
-        user = Parse.User;
-      } 
-      else {
-        
-      }  
-      // other fields can be set just like with Parse.Object
-
-      $("submit").click(function() {
-        var username = $("#username");
-        var password = $("#password");
-
-        alert("username:" + username + " - password:" + password);
-        Parse.User.logIn("dhpark", "mhacks", {
-          success: function(user) {
-            // Do stuff after successful login.
-            alert('You are logged in');
-          },
-          error: function(user, error) {
-            // The login failed. Check error to see why.
-            console.log("Error: " + error.code + " " + error.message);
-          }
-        });
-      })
-        
-      user.signUp(null, {
-        success: function(user) {
-          // Hooray! Let them use the app now.
-          var user = new Parse.User();
-          user.set("username", "dhpark");
-          user.set("password", "mhacks");
-          user.set("email", "dhpark01@email.wm.edu");
-          $("content").toggle();
-        },
-        error: function(user, error) {
-          // Show the error message somewhere and let the user try again.
-          console.log("Error: " + error.code + " " + error.message);
-        }
-      });
-
-    </script>
-
-    <form class="login-form" method="get">
-      <h2>Log In</h2>
-      <div class="error" style="display:none"></div>
-      <input type="text" id="login-username" placeholder="Username" />
-      <input type="password" id="login-password" placeholder="Password" />
-      <button id="login" type="submit">Log In</button>
-    </form>  
-
-    <div class="nav-bar">
-      <a href="login.html">Login</a>
-      <a href="#">Explorers</a>
-      <a href="#">Research</a>
-      <a href="#">Missions</a>
-      <a href="#">Home</a>
-    </div>
-
-    <div class="content" style="display:none;">
-      <div class="cta">
-        <h1>Shopping at its best.</h1>
-        <div class="sub-description">
-          Data-driven recommendations for<br>
-          when and where to shop
-        </div>
-      </div>
-    
-      <a class="begin" href="calc.html">
-        START EXPLORING
-      </a>
-    </div>
-  </body>
+		<section class="screenshots-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Packed Full of Powerful Features</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						<p><a href="#screenshots" class="arrow-btn">See the screenshots! <i class="fa fa-long-arrow-right"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="screenshots" id="screenshots">
+			<div class="container-fluid">
+				<div class="row">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/01-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/01.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>Optimised For Design</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/02-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/02.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>User Centric Design</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/03-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/03.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>Responsive and Adaptive</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/04-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/04.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>Absolutely Free</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+				<div class="row">
+					<ul class="grid">
+						<li>
+							<figure>
+								<img src="img/05-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/05.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>Multi-Purpose Design</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/06-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/06.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>Exclusive to Codrops</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/07-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/07.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>Made with Love</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="img/08-screenshot.jpg" alt="Screenshot 01">
+								<figcaption>
+								<div class="caption-content">
+									<a href="img/large/08.jpg" class="single_image">
+										<i class="fa fa-search"></i><br>
+										<p>In Sydney, Australia</p>
+									</a>
+								</div>
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="download" id="download">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center wp4">
+						<h1>Seen Enough?</h1>
+						<a href="http://tympanus.net/codrops/?p=22554" class="download-btn">Download! <i class="fa fa-download"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<h1 class="footer-logo">
+						<img src="img/logo-blue.png" alt="Footer Logo Blue">
+						</h1>
+						<p>© Boxify 2015 - <a href="http://tympanus.net/codrops/licensing/">Licence</a> - Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Peter Finlan</a></p>
+					</div>
+					<div class="col-md-7">
+						<ul class="footer-nav">
+							<li><a href="#about">About</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#screenshots">Screenshots</a></li>
+							<li><a href="#download">Download</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="overlay overlay-boxify">
+			<nav>
+				<ul>
+					<li><a href="#about"><i class="fa fa-heart"></i>About</a></li>
+					<li><a href="#features"><i class="fa fa-flash"></i>Features</a></li>
+				</ul>
+				<ul>
+					<li><a href="#screenshots"><i class="fa fa-desktop"></i>Screenshots</a></li>
+					<li><a href="#download"><i class="fa fa-download"></i>Download</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/min/toucheffects-min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/flickity.pkgd.min.js"></script>
+		<script src="js/jquery.fancybox.pack.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/retina.js"></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/min/scripts-min.js"></script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+	</body>
 </html>
