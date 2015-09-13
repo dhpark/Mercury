@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("login").click(function() {
+          var username = $("#username").value();
+          var password = $("#password").value();
+
+          alert("username:" + username + " - password:" + password);
+
+          user.signUp(null, {
+            success: function(user) {
+              // Hooray! Let them use the app now.
+              var user = new Parse.User();
+              user.set("username", username);
+              user.set("password", password);
+              user.set("email", "dhpark01@email.wm.edu");
+              user.save();
+
+            },
+            error: function(user, error) {
+              // Show the error message somewhere and let the user try again.
+              console.log("Error: " + error.code + " " + error.message);
+            }
+          });
+
+        })
+      });
+    </script>
+  </head>
+  
+  <body class="landing">
+    <script>
+      Parse.initialize("ss4Qntwp1qBNb2cDgmI10Jt6A9RNpFJOckwGbHAn", "dQVT5XqLPGwKy2ycHZSKhvDHJWCX5lvQYb75qCQo");
+
+      var currentUser = Parse.User.current();
+      if (currentUser) {
+        user = Parse.User;
+      } 
+      else {
+        
+      }  
+      // other fields can be set just like with Parse.Object
+
+      $("submit").click(function() {
+        var username = $("#username");
+        var password = $("#password");
+
+        alert("username:" + username + " - password:" + password);
+        Parse.User.logIn("dhpark", "mhacks", {
+          success: function(user) {
+            // Do stuff after successful login.
+            alert('You are logged in');
+          },
+          error: function(user, error) {
+            // The login failed. Check error to see why.
+            console.log("Error: " + error.code + " " + error.message);
+          }
+        });
+      })
+        
+      user.signUp(null, {
+        success: function(user) {
+          // Hooray! Let them use the app now.
+          var user = new Parse.User();
+          user.set("username", "dhpark");
+          user.set("password", "mhacks");
+          user.set("email", "dhpark01@email.wm.edu");
+          $("content").toggle();
+        },
+        error: function(user, error) {
+          // Show the error message somewhere and let the user try again.
+          console.log("Error: " + error.code + " " + error.message);
+        }
+      });
+
+    </script>
+
+    <form class="login-form" method="get">
+      <h2>Log In</h2>
+      <div class="error" style="display:none"></div>
+      <input type="text" id="login-username" placeholder="Username" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button id="login" type="submit">Log In</button>
+    </form>  
+
+    <div class="nav-bar">
+      <a href="login.html">Login</a>
+      <a href="#">Explorers</a>
+      <a href="#">Research</a>
+      <a href="#">Missions</a>
+      <a href="#">Home</a>
+    </div>
+
+    <div class="content" style="display:none;">
+      <div class="cta">
+        <h1>Shopping at its best.</h1>
+        <div class="sub-description">
+          Data-driven recommendations for<br>
+          when and where to shop
+        </div>
+      </div>
+    
+      <a class="begin" href="calc.html">
+        START EXPLORING
+      </a>
+    </div>
+  </body>
+</html>

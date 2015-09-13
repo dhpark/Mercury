@@ -7,7 +7,9 @@ import base64
 
 # compareUrl = "http://www.walmart.com/ip/Apple-iPad-mini-16GB-Wi-Fi/22081453"
 # compareUrl = "http://www.walmart.com/ip/Apple-iPod-shuffle-2GB-Space-Gray/46088119"
+# best_sellers = "http://api.walmartlabs.com/v1/feeds/bestsellers?apikey=8jnhn7qa87btp7h78ds7drcq&categoryId=3944"
 compareUrl = "http://www.walmart.com/ip/HP-Flyer-Red-15.6-15-R132WM-Laptop-PC-with-Intel-Pentium-N3540-Processor-4GB-Memory-500GB-Hard-Drive-and-Windows-8.1/41122950"
+bestbuy = "http://www.bestbuy.com/site/hp-geek-squad-certified-refurbished-15-6-laptop-intel-pentium-4gb-memory-750gb-hard-drive-black-licorice/7063123.p?id=1219668756227&skuId=7063123"
 memento = "http://web.archive.org/web/"
 wayback = "http://archive.org/wayback/available?url="
 
@@ -96,9 +98,10 @@ wolfram_input = str(new_form).replace("]", "}")
 # print(str(wolfram_input))
 encoded = base64.b64encode(bytes(wolfram_input, "UTF-8"))
 
-wolfram = "https://www.wolframcloud.com/objects/665af020-cc1a-411f-a538-ccd2173ad1b5?input="
+wolfram = "https://www.wolframcloud.com/objects/dfd6a979-c874-412e-a524-2c5ca57b4948?input="
 wolfram_api = wolfram + encoded.decode('utf-8')
-# print(wolfram_api)
+
+#print(wolfram_api)
 z = requests.get(wolfram_api, stream=True)
 image = z.raw.read(1000000)
 
